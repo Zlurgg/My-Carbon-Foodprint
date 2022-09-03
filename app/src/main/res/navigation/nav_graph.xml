@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.LandingFragment"
+        android:label="@string/landing_fragment_label"
+        tools:layout="@layout/fragment_landing">
+    <action
+        android:id="@+id/action_titleFragment_to_aboutFragment"
+        app:destination="@id/aboutFragment" />
+        <action
+        android:id="@+id/action_titleFragment_to_mealFragment"
+        app:destination="@id/mealSelectionFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_mealEditFragment"
+            app:destination="@id/mealEditFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_goalFragment"
+            app:destination="@id/goalFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_myDayFragment"
+            app:destination="@id/myDayFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.AboutFragment"
+        android:label="@string/about_fragment_label"
+        tools:layout="@layout/fragment_about"/>
+
+    <fragment
+        android:id="@+id/mealSelectionFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.meal.MealSelectionFragment"
+        android:label="@string/edit_meal_fragment_label"
+        tools:layout="@layout/fragment_meal_edit">
+        <action
+            android:id="@+id/action_mealSelectionFragment_to_mealEditFragment"
+            app:destination="@id/mealEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myDayFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.MyDayFragment"
+        android:label="fragment_my_day"
+        tools:layout="@layout/fragment_my_day" />
+    <fragment
+        android:id="@+id/goalFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.GoalFragment"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" />
+    <fragment
+        android:id="@+id/mealEditFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.meal.MealEditFragment"
+        android:label="MealEditFragment" />
+</navigation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myDayFragment"
+        android:title="@string/my_day_menu" />
+    <item
+        android:id="@+id/mealEditFragment"
+        android:title="@string/meal_creation_menu" />
+    <item
+        android:id="@+id/mealSelectionFragment"
+        android:title="@string/meal_selection_menu" />
+    <item
+        android:id="@+id/goalsFragment"
+        android:title="@string/goals_menu" />
+    <item
+        android:id="@+id/aboutFragment"
+        android:title="@string/about_menu" />
+</menu>
