@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/landingFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.LandingFragment"
-        android:label="@string/landing_fragment_label"
+        android:label="@string/landing_page_label"
         tools:layout="@layout/fragment_landing">
         <action
             android:id="@+id/action_landingFragment_to_loginFragment"
@@ -36,32 +36,37 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.AboutFragment"
-        android:label="@string/about_fragment_label"
+        android:label="@string/about_label"
         tools:layout="@layout/fragment_about" />
 
     <fragment
         android:id="@+id/mealSelectionFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.meal.MealSelectionFragment"
-        android:label="@string/edit_meal_fragment_label"
-        tools:layout="@layout/fragment_meal_edit">
+        android:label="@string/meal_selection_label"
+        tools:layout="@layout/fragment_meal_selection">
         <action
             android:id="@+id/action_mealSelectionFragment_to_mealEditFragment"
             app:destination="@id/mealEditFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/myDayFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.MyDayFragment"
-        android:label="fragment_my_day"
+        android:label="@string/my_day_label"
         tools:layout="@layout/fragment_my_day" />
+
     <fragment
         android:id="@+id/goalFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.GoalFragment"
-        android:label="fragment_goal"
+        android:label="@string/goal_label"
         tools:layout="@layout/fragment_goal" />
+
     <fragment
         android:id="@+id/mealEditFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.meal.MealEditFragment"
-        android:label="MealEditFragment" />
+        android:label="@string/meal_edit_label"
+        tools:layout="@layout/fragment_meal_edit" />
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.ui.login.LoginFragment"

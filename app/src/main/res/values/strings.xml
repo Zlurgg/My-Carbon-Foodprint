@@ -6,12 +6,12 @@
     <string name="previous">Previous</string>
 
     <!-- Landing Page -->
-    <string name="landing_fragment_label">Welcome to Foodprint</string>
+    <string name="landing_page_label">Welcome to Foodprint</string>
     <string name="landing_page_hint">Enter the name of your meal</string>
     <string name="landing_page_button_enter">Enter</string>
 
     <!-- About Page -->
-    <string name="about_fragment_label">About Our Goals</string>
+    <string name="about_label">About Our Goals</string>
     <string name="about_title">Our Mission</string>
     <string name="about_subtitle">To reduce global food emissions by making sustainable eating easy for everyone.</string>
     <string name="about_info">After learning more about the critical issues our current food production system is creating and how it impacts the climate, we felt compelled to make the changes required to help to no longer be apart of the problem.\n\nHowever, <b>we found it really hard!</b> The more we learned about what impacts the climate, the harder it seemed to be to help solve it. Simply eating vegetarian or even vegan wasn’t going to cut it as there are simply so many factors at play. We thought, if we’re struggling with it all, other people must be to, and so we thought we’d try and help.\n\nJust like trying to save money or losing weight, we thought understanding our current impact through tracking was the best place to start and so we built MyCarbonFoodPrint.\n\nThe tool allows you to see what impact your planed meal will have and helps you understand how to reduce it.</string>
@@ -20,17 +20,25 @@
     <string name="about_co2_info">It is a measure of total climate change impact of all greenhouse gases over a one hundred year period. It is made up of more than just carbon dioxide. Methane 11%, Nitrous Oxide 5% and others 3% play their own part. To keep things simple CO2 is the biggest contributor and is the one focused on.\n\nWhen you enter your meal on our site, we are using pre-existing values of CO2e and the weight given by you to calculate a value per item and then meal along with using conversion factors to try and give a real life equivalent. Hopefully making it a bit more impactful!\n\nTo get these values of CO2e we have to take into account various factors in the production of a item. For example we need consider the following. Land use change, animal feed, farming methods, processing, transport, packaging retail and cooking practice. All of that combined is the carbon footprint of a single item.\n\nA major starting point for our values are various online sources and studies all of which are available on the site.\n\nJust to be clear, everything we do is at best an estimate and there are huge uncertainties at play. There is no way of knowing the full breakdown of each item or controlling all the factors that make it up. But that doesn\'t mean that we shouldn\'t do this or that the values given don\'t have value. Just that when we say you are taking 3 baths is might be 2 or 4 instead!</string>
 
     <!-- Meal Edit Page -->
-    <string name="edit_meal_fragment_label">Meal Edit</string>
+    <string name="meal_edit_label">Meal Edit</string>
 
     <!-- Meal Selection Page -->
+    <string name="meal_selection_label">Meal/Item Selection</string>
 
+    <!-- My Day Page -->
+    <string name="my_day_label">My Day</string>
+
+    <!-- Goal Page -->
+    <string name="goal_label">Goal</string>
+    <string name="goal_title">Goal Selection</string>
     <!-- Menu titles -->
     <string name="my_day_menu">My Day</string>
     <string name="meal_creation_menu">Meal Creation</string>
-    <string name="meal_selection_menu">Meal Selection</string>
-    <string name="goals_menu">Goals</string>
+    <string name="meal_selection_menu">Meal/Item Selection</string>
+    <string name="goal_menu">Goals</string>
     <string name="about_menu">About Us</string>
-    <!-- Strings related to login -->
+
+    <!-- Login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>

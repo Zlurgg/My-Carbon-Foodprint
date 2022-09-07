@@ -12,8 +12,8 @@
         android:id="@+id/mealSelectionFragment"
         android:title="@string/meal_selection_menu" />
     <item
-        android:id="@+id/goalsFragment"
-        android:title="@string/goals_menu" />
+        android:id="@+id/goalFragment"
+        android:title="@string/goal_menu" />
     <item
         android:id="@+id/aboutFragment"
         android:title="@string/about_menu" />
