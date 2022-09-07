@@ -10,12 +10,17 @@
         android:name="uk.co.brightman.mycarbonfoodprint.LandingFragment"
         android:label="@string/landing_fragment_label"
         tools:layout="@layout/fragment_landing">
-    <action
-        android:id="@+id/action_titleFragment_to_aboutFragment"
-        app:destination="@id/aboutFragment" />
         <action
-        android:id="@+id/action_titleFragment_to_mealFragment"
-        app:destination="@id/mealSelectionFragment" />
+            android:id="@+id/action_landingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/landingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_landingFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_mealFragment"
+            app:destination="@id/mealSelectionFragment" />
         <action
             android:id="@+id/action_landingFragment_to_mealEditFragment"
             app:destination="@id/mealEditFragment" />
@@ -32,7 +37,7 @@
         android:id="@+id/aboutFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.AboutFragment"
         android:label="@string/about_fragment_label"
-        tools:layout="@layout/fragment_about"/>
+        tools:layout="@layout/fragment_about" />
 
     <fragment
         android:id="@+id/mealSelectionFragment"
@@ -57,4 +62,13 @@
         android:id="@+id/mealEditFragment"
         android:name="uk.co.brightman.mycarbonfoodprint.meal.MealEditFragment"
         android:label="MealEditFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="uk.co.brightman.mycarbonfoodprint.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_landingFragment"
+            app:destination="@id/landingFragment" />
+    </fragment>
 </navigation>

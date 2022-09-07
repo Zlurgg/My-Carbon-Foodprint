@@ -24,6 +24,7 @@ class LandingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentLandingBinding.inflate(inflater, container, false)
+
         return binding.root
 
     }

@@ -15,9 +15,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import uk.co.brightman.mycarbonfoodprint.databinding.FragmentLoginBinding
 
 import uk.co.brightman.mycarbonfoodprint.R
+import uk.co.brightman.mycarbonfoodprint.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 

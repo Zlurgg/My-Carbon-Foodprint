@@ -36,18 +36,15 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         /**
-         * Nav drawer (options to navigate to all fragments)
+         * Nav drawer (set up nav menu)
          */
         drawerLayout = binding.drawerLayout
         NavigationUI.setupActionBarWithNavController(
             this, navController, drawerLayout)
 
-        binding.drawerLayout.setOnClickListener { view ->
-            when (view.id) {
-                R.id.navView -> navController.navigate(R.id.aboutFragment)
-            }
-        }
-
+        NavigationUI.setupWithNavController(
+            binding.navView, navController)
+        
         /**
          * Float action button to add new item -> meal edit
          **/
