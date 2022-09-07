@@ -5,4 +5,62 @@
     android:layout_height="match_parent"
     tools:context=".MyDayFragment">
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_day_title_breakfast"
+            android:layout_marginTop="@dimen/spacing_32"
+            style="@style/title"
+            android:layout_marginStart="@dimen/spacing_16"/>
+        <TextView
+            android:id="@+id/myDayBreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_day_placeholder_meal"
+            style="@style/title"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginEnd="@dimen/spacing_16"
+            android:padding="@dimen/spacing_16"
+            android:background="@drawable/my_day_meals_boarder"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_day_title_lunch"
+            style="@style/title"
+            android:layout_marginStart="@dimen/spacing_16"/>
+        <TextView
+            android:id="@+id/myDayLunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_day_placeholder_meal"
+            style="@style/title"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginEnd="@dimen/spacing_16"
+            android:padding="@dimen/spacing_16"
+            android:background="@drawable/my_day_meals_boarder"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_day_title_dinner"
+            style="@style/title"
+            android:layout_marginStart="@dimen/spacing_16"/>
+        <TextView
+            android:id="@+id/myDayDinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Example Dinner"
+            style="@style/title"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginEnd="@dimen/spacing_16"
+            android:padding="@dimen/spacing_16"
+            android:background="@drawable/my_day_meals_boarder"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 </FrameLayout>

@@ -27,25 +27,21 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/spacing_32"
-                android:layout_marginBottom="@dimen/spacing_16"
                 android:text="@string/about_title"
-                android:textSize="@dimen/title_text_size"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/title" />
 
             <TextView
                 android:id="@+id/textAboutSubtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_16"
                 android:text="@string/about_subtitle"
-                android:textSize="@dimen/subtitle_text_size"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textAboutTitle" />
+                app:layout_constraintTop_toBottomOf="@id/textAboutTitle"
+                style="@style/subtitle" />
 
             <TextView
                 android:id="@+id/textAboutInfo"
@@ -62,25 +58,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/spacing_16"
                 android:text="@string/about_co2_title"
-                android:textSize="@dimen/title_text_size"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textAboutInfo" />
+                app:layout_constraintTop_toBottomOf="@id/textAboutInfo"
+                style="@style/title" />
 
             <TextView
                 android:id="@+id/textCo2Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_16"
                 android:text="@string/about_co2_subtitle"
-                android:textSize="@dimen/subtitle_text_size"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textCo2Title" />
+                app:layout_constraintTop_toBottomOf="@id/textCo2Title"
+                style="@style/subtitle" />
 
             <TextView
                 android:id="@+id/textCo2Info"

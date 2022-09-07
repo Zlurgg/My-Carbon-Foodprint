@@ -6,11 +6,11 @@
         android:id="@+id/myDayFragment"
         android:title="@string/my_day_menu" />
     <item
-        android:id="@+id/mealEditFragment"
-        android:title="@string/meal_creation_menu" />
-    <item
         android:id="@+id/mealSelectionFragment"
         android:title="@string/meal_selection_menu" />
+    <item
+        android:id="@+id/mealEditFragment"
+        android:title="@string/meal_creation_menu" />
     <item
         android:id="@+id/goalFragment"
         android:title="@string/goal_menu" />
