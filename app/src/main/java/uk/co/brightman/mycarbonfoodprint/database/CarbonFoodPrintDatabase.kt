@@ -4,12 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import uk.co.brightman.mycarbonfoodprint.database.meals.Meal
 import uk.co.brightman.mycarbonfoodprint.database.meals.MealDao
 import uk.co.brightman.mycarbonfoodprint.database.users.User
 import uk.co.brightman.mycarbonfoodprint.database.users.UserDao
+import uk.co.brightman.mycarbonfoodprint.util.Converters
 
 @Database(entities = [User::class, Meal::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class CarbonFoodPrintDatabase: RoomDatabase() {
 
     abstract val userDao: UserDao

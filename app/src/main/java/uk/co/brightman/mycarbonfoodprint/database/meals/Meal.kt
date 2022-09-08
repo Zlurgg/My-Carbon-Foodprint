@@ -13,5 +13,5 @@ data class Meal(
     val name: String = "",
 
     @ColumnInfo(name = "ingredients")
-    val ingredients: ArrayList<String> = arrayListOf()
+    val ingredients: List<String> = listOf("")
 )
