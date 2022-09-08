@@ -8,7 +8,7 @@ import java.util.*
 @Entity(tableName = "meal_table")
 data class Meal(
     @PrimaryKey(autoGenerate = true)
-    var mealId: String = UUID.randomUUID().toString(),
+    var mealId: Long = 0L,
 
     @ColumnInfo(name = "name")
     val name: String = "default_name",
