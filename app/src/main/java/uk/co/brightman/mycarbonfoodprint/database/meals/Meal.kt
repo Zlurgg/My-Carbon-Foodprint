@@ -8,12 +8,12 @@ import java.util.*
 @Entity(tableName = "meal_table")
 data class Meal(
     @PrimaryKey(autoGenerate = true)
-    var mealId: Long = 0L,
+    val mealId: Long = 0L,
 
     @ColumnInfo(name = "name")
-    val name: String = "default_name",
+    var name: String = "default_name",
 
     @ColumnInfo(name = "ingredients")
-    val ingredients: List<String> =
+    var ingredients: List<String> =
         listOf("default_ingredient_one", "default_ingredient_two", "default_ingredient_three")
 )

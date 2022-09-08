@@ -23,6 +23,4 @@ interface MealDao {
     @Query("SELECT * FROM meal_table ORDER BY name DESC")
     fun getAllMeals(): LiveData<List<Meal>>
 
-    @Query("SELECT * FROM meal_table LIMIT 1")
-    fun getSingleMeal(): Meal?
 }

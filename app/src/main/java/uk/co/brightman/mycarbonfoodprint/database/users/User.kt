@@ -8,11 +8,11 @@ import java.util.*
 @Entity(tableName = "user_table")
 data class User(
     @PrimaryKey(autoGenerate = true)
-    var userId: Long = 0L,
+    val userId: Long = 0L,
 
     @ColumnInfo(name = "email_address")
-    val emailAddress: String = "default_emailaddress",
+    var emailAddress: String = "default_emailAddress",
 
     @ColumnInfo(name = "password")
-    val password: String = "default_password"
+    var password: String = "default_password"
 )
