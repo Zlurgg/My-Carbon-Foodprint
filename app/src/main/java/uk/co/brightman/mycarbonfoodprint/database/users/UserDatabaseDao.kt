@@ -20,8 +20,8 @@ interface UserDatabaseDao {
     @Query("DELETE FROM user_table")
     fun clear()
 
-    @Query("SELECT userId FROM user_table ORDER BY userId DESC LIMIT 1")
-    fun getUserId(): User?
+    @Query("SELECT * FROM user_table ORDER BY userId DESC LIMIT 1")
+    fun getSingleUser(): User?
 
     @Query("SELECT * FROM user_table ORDER BY email_address DESC")
     fun getAllUsers(): LiveData<List<User>>

@@ -41,7 +41,7 @@ class CarbonFoodprintDatabaseTest {
     fun insertAndGetUser() {
         val user = User()
         userDao.insert(user)
-        val userId = userDao.getUserId()
-        Assert.assertEquals(userId?.userId, -1)
+        val oneUser = userDao.getSingleUser()
+        Assert.assertEquals(oneUser?.userId, 1)
     }
 }
