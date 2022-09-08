@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import uk.co.brightman.mycarbonfoodprint.database.meals.Meal
+import uk.co.brightman.mycarbonfoodprint.database.meals.MealDao
 import uk.co.brightman.mycarbonfoodprint.database.users.User
-import uk.co.brightman.mycarbonfoodprint.database.users.UserDatabaseDao
+import uk.co.brightman.mycarbonfoodprint.database.users.UserDao
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Meal::class], version = 1, exportSchema = false)
 abstract class CarbonFoodPrintDatabase: RoomDatabase() {
 
-    abstract val userDatabaseDao: UserDatabaseDao
+    abstract val userDao: UserDao
+    abstract val mealDao: MealDao
 
     companion object {
         @Volatile

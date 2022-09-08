@@ -8,14 +8,17 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import uk.co.brightman.mycarbonfoodprint.database.meals.Meal
+import uk.co.brightman.mycarbonfoodprint.database.meals.MealDao
 import uk.co.brightman.mycarbonfoodprint.database.users.User
-import uk.co.brightman.mycarbonfoodprint.database.users.UserDatabaseDao
+import uk.co.brightman.mycarbonfoodprint.database.users.UserDao
 import java.io.IOException
 
 @RunWith(AndroidJUnit4::class)
 class CarbonFoodprintDatabaseTest {
 
-    private lateinit var userDao: UserDatabaseDao
+    private lateinit var userDao: UserDao
+    private lateinit var mealDao: MealDao
     private lateinit var db: CarbonFoodPrintDatabase
 
     @Before
@@ -27,7 +30,8 @@ class CarbonFoodprintDatabaseTest {
             // Allowing main thread queries, just for testing.
             .allowMainThreadQueries()
             .build()
-        userDao = db.userDatabaseDao
+        userDao = db.userDao
+        mealDao = db.mealDao
     }
 
     @After
@@ -43,5 +47,14 @@ class CarbonFoodprintDatabaseTest {
         userDao.insert(user)
         val oneUser = userDao.getSingleUser()
         Assert.assertEquals(oneUser?.userId, 1)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun insertAndGetMeal() {
+        val meal = Meal()
+        mealDao.insert(meal)
+        val oneMeal = mealDao.getSingleMeal()
+        Assert.assertEquals(oneMeal?.mealId, 1)
     }
 }
