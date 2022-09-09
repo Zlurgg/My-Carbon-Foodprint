@@ -8,6 +8,8 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import uk.co.brightman.mycarbonfoodprint.database.equivalences.Equivalence
+import uk.co.brightman.mycarbonfoodprint.database.equivalences.EquivalenceDao
 import uk.co.brightman.mycarbonfoodprint.database.ingredients.Ingredient
 import uk.co.brightman.mycarbonfoodprint.database.ingredients.IngredientDao
 import uk.co.brightman.mycarbonfoodprint.database.meals.Meal
@@ -22,6 +24,8 @@ class CarbonFoodprintDatabaseTest {
     private lateinit var userDao: UserDao
     private lateinit var ingredientDao: IngredientDao
     private lateinit var mealDao: MealDao
+    private lateinit var equivalenceDao: EquivalenceDao
+
     private lateinit var db: CarbonFoodPrintDatabase
 
     @Before
@@ -36,6 +40,8 @@ class CarbonFoodprintDatabaseTest {
         userDao = db.userDao
         ingredientDao = db.ingredientDao
         mealDao = db.mealDao
+        equivalenceDao = db.equivalenceDao
+
     }
 
     @After
@@ -43,6 +49,7 @@ class CarbonFoodprintDatabaseTest {
     fun closeDb() {
         db.close()
     }
+
 
     /** create and check a default user fetch via id **/
     @Test
@@ -77,5 +84,18 @@ class CarbonFoodprintDatabaseTest {
         val oneMeal = mealDao.get(1L)
         Assert.assertEquals(oneMeal?.name, "default_name")
         Assert.assertEquals(oneMeal?.ingredients, listOf("default_ingredient_one", "default_ingredient_two", "default_ingredient_three"))
+    }
+
+    /** create and fetch a default equivalence fetch via id **/
+    @Test
+    @Throws(Exception::class)
+    fun insertAndGetDefaultEquivalence() {
+        val equivalence = Equivalence()
+        equivalenceDao.insert(equivalence)
+        val oneEquivalence = equivalenceDao.get(1L)
+        Assert.assertEquals(oneEquivalence?.name, "default_name")
+        Assert.assertEquals(oneEquivalence?.type, "default_type")
+        Assert.assertEquals(oneEquivalence?.unit, "default_unit")
+        Assert.assertEquals(oneEquivalence?.value, 0.00)
     }
 }

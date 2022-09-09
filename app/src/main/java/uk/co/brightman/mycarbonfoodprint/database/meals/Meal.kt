@@ -15,5 +15,9 @@ data class Meal(
 
     @ColumnInfo(name = "ingredients")
     var ingredients: List<String> =
-        listOf("default_ingredient_one", "default_ingredient_two", "default_ingredient_three")
+        listOf("default_ingredient_one", "default_ingredient_two", "default_ingredient_three"),
+
+    /** should meals have a stored co2e to save calculating it on the fly each time **/
+    @ColumnInfo(name = "CO2eValue")
+    var c02eValue: Double = 0.00
 )
